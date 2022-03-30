@@ -1,8 +1,9 @@
-#wget http://downloads.metasploit.com/data/releases/metasploit-latest-linux-x64-installer.run
+#!/bin/bash
 
-    #Curl working version of Metasploit 
-#curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall && msfconsole && msfdb init
+#Install Metasploit With GUI .run Installer - Usually configures databases properly to postgresql
+wget http://downloads.metasploit.com/data/releases/metasploit-latest-linux-x64-installer.run
 
+#Installs Metsploit Using CLI interface and Nightly installers - Requires heavy consifuration of Ruby, RVM, GEMs and Python
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
   chmod 755 msfinstall && \
   ./msfinstall
